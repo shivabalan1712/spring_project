@@ -6,10 +6,17 @@
 
 
     <bean id="st1" class="org.example.Student">
-
+        <property name="writer" ref="p3"/>
     </bean>
     <bean id="st2" class="org.example.Student">
-
     </bean>
+
+    <bean id="p1" class="org.example.Pen">
+    </bean>
+    <bean id="p2" class="org.example.Pencil">
+    </bean>
+    <bean id="p3" class="org.example.Sketch">
+    </bean>
+
 
 </beans>

@@ -13,7 +13,9 @@ public class App
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("springconfig.xml");
 
-        Student student = (Student) context.getBean("st2");
-        student.show();
+        Student student = (Student) context.getBean("st1");
+//        student.setAge(-25);
+//        System.out.println(student.getAge()+" "+student.getRollno());
+        student.writeExam();
     }
 }
