@@ -5,13 +5,16 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="st1" class="org.example.Student">
-        <property name="writer" ref="p3"/>
+    <bean id="st1" class="org.example.Student" autowire="constructor">
+<!--        <property name="writer" ref="writer"/>-->
+        <constructor-arg index="0" value="100"/>
+        <constructor-arg index="1" value="1"/>
+<!--        <constructor-arg index="2" ref="p1"/>-->
     </bean>
     <bean id="st2" class="org.example.Student">
     </bean>
 
-    <bean id="p1" class="org.example.Pen">
+    <bean id="p1" class="org.example.Pen" primary="true">
     </bean>
     <bean id="p2" class="org.example.Pencil">
     </bean>
